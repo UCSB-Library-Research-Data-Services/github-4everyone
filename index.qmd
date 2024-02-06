@@ -7,7 +7,7 @@ This workshop is part of the [UC Love Data Week (LDW)](https://uc-love-data-week
 
 
 
-### Learning Outcomes
+## Learning Outcomes
 
 - Have a better knowledge of version control
 - Have a better grasp of what how you can collaborate using the GitHub website
