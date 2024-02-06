@@ -46,14 +46,14 @@
     "href": "index.html",
     "title": "GitHub for Everyone",
     "section": "",
-    "text": "This workshop is part of the UC Love Data Week (LDW) 2024. During this 1h session we will explore the features of the GitHub website to manage and version content as a team. We will go over how to create a repository, edit files, and leverage the markdown syntax for documenting and tracking your work. We will also demonstrate how to invite collaborators. Participating in this workshop requires no coding skills or pre-installs (including the hands-on session). Everything will be done from your web browser!\n\n\n\nHave a better knowledge of version control\nHave a better grasp of what how you can collaborate using the GitHub website\nWanting to know more about git and GitHub, it’s a journey we hop you’ll start yours!!!"
+    "text": "This workshop is part of the UC Love Data Week (LDW) 2024. During this 1h session we will explore the features of the GitHub website to manage and version content as a team. We will go over how to create a repository, edit files, and leverage the markdown syntax for documenting and tracking your work. We will also demonstrate how to invite collaborators. Participating in this workshop requires no coding skills or pre-installs (including the hands-on session). Everything will be done from your web browser!"
   },
   {
-    "objectID": "index.html#uc-love-data-week-ldw-github-for-everyone",
-    "href": "index.html#uc-love-data-week-ldw-github-for-everyone",
+    "objectID": "index.html#learning-outcomes",
+    "href": "index.html#learning-outcomes",
     "title": "GitHub for Everyone",
-    "section": "",
-    "text": "This workshop is part of the UC Love Data Week (LDW) 2024. During this 1h session we will explore the features of the GitHub website to manage and version content as a team. We will go over how to create a repository, edit files, and leverage the markdown syntax for documenting and tracking your work. We will also demonstrate how to invite collaborators. Participating in this workshop requires no coding skills or pre-installs (including the hands-on session). Everything will be done from your web browser!\n\n\n\nHave a better knowledge of version control\nHave a better grasp of what how you can collaborate using the GitHub website\nWanting to know more about git and GitHub, it’s a journey we hop you’ll start yours!!!"
+    "section": "Learning Outcomes",
+    "text": "Learning Outcomes\n\nHave a better knowledge of version control\nHave a better grasp of what how you can collaborate using the GitHub website\nWanting to know more about git and GitHub, it’s a journey we hop you’ll start yours!!!"
   },
   {
     "objectID": "01-handson_github_website.html",
