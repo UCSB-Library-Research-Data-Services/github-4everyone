@@ -49,6 +49,8 @@ po/*~
 rsconnect/
 
 /.quarto/
+ # gh action set up to render website
+/_site/  
 
 # Mac Stuff
 .DS_Store
