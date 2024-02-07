@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -133,7 +167,17 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#collaborator-workflow" id="toc-collaborator-workflow" class="nav-link active" data-scroll-target="#collaborator-workflow">Collaborator Workflow</a>
+  <ul class="collapse">
+  <li><a href="#bonus" id="toc-bonus" class="nav-link" data-scroll-target="#bonus">Bonus</a></li>
+  <li><a href="#fork-workflow" id="toc-fork-workflow" class="nav-link" data-scroll-target="#fork-workflow">Fork Workflow</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -178,6 +222,8 @@ Don’t have a GitHub account?
 </div>
 </div>
 </div>
+<section id="collaborator-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="collaborator-workflow">Collaborator Workflow</h2>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -219,7 +265,7 @@ Our asks
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="img/github-readme_desserts.png" class="img-fluid figure-img"></p>
+<p><img src="img/github-readme_desserts.png" class="img-fluid figure-img" width="1248"></p>
 </figure>
 </div>
 </div>
@@ -239,7 +285,7 @@ Our asks
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="img/github-readme-edit.png" class="img-fluid figure-img"></p>
+<p><img src="img/github-readme-edit.png" class="img-fluid figure-img" width="556"></p>
 </figure>
 </div>
 </div>
@@ -253,7 +299,7 @@ Our asks
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="img/github-commit.png" class="img-fluid figure-img"></p>
+<p><img src="img/github-commit.png" class="img-fluid figure-img" width="531"></p>
 </figure>
 </div>
 </div>
@@ -271,23 +317,104 @@ Our asks
 </div>
 </div>
 </section>
-<section id="person-1-add-a-file" class="level4">
-<h4 class="anchored" data-anchor-id="person-1-add-a-file">Person 1: add a file</h4>
-<p>Download this <a href="https://aurora.nceas.ucsb.edu/~brun/favorite_desserts.csv">csv file</a> about your favorite desserts to your computer</p>
+<section id="person-1-add-a-csv-file" class="level4">
+<h4 class="anchored" data-anchor-id="person-1-add-a-csv-file">Person 1: add a csv file</h4>
+<p>Download this <a href="https://raw.githubusercontent.com/brunj7/eds214-handson-ghcollab/main/data/iconic_desserts.csv">csv file</a> about your favorite desserts to your computer</p>
 <ul>
-<li>Just drag and drop it on the Github web page of your repository to upload it</li>
-<li>Add a short message about the file e.g.&nbsp;<code>Adding dessert csv</code> &amp; hit <code>Commit changes</code></li>
+<li>Drag and drop it on the Github web page of your repository to upload it</li>
+<li>Add a short message about the file e.g.&nbsp;<code>Add dessert csv</code> &amp; hit <code>Commit changes</code></li>
 <li>Your have has been uploaded. Click on the filename to see it!</li>
 </ul>
 <p>You should have something similar to this repo: <a href="https://github.com/brunj7/favorite-desserts" class="uri">https://github.com/brunj7/favorite-desserts</a></p>
 </section>
-<section id="bonus" class="level4">
-<h4 class="anchored" data-anchor-id="bonus">Bonus</h4>
+<section id="person-2-add-an-r-script" class="level4">
+<h4 class="anchored" data-anchor-id="person-2-add-an-r-script">Person 2: add an R script</h4>
+<p>This is the script we used to scrape the iconic desserts listing:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rvest)  <span class="co"># use to scrape website content</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if that data folder exists and creates it if not</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="st">"data"</span>, <span class="at">showWarnings =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the webpage code</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>webpage <span class="ot">&lt;-</span> <span class="fu">read_html</span>(<span class="st">"https://www.eatthis.com/iconic-desserts-united-states/"</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract the desserts listing</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>dessert_elements<span class="ot">&lt;-</span> <span class="fu">html_elements</span>(webpage, <span class="st">"h2"</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>dessert_listing <span class="ot">&lt;-</span> dessert_elements <span class="sc">%&gt;%</span> </span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_text2</span>() <span class="sc">%&gt;%</span>             <span class="co"># extracting the text associated with this type of elements of the webpage</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>() <span class="sc">%&gt;%</span>              <span class="co"># make it a data frame</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">dessert =</span> value) <span class="sc">%&gt;%</span>  <span class="co"># better name for the column</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(.,<span class="sc">-</span><span class="dv">3</span>) <span class="sc">%&gt;%</span>               <span class="co"># 3 last ones were not desserts </span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rowid_to_column</span>(<span class="st">"rank"</span>) <span class="sc">%&gt;%</span>  <span class="co"># adding a column using the row number as proxy for the rank</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_csv</span>(<span class="st">"data/iconic_desserts.csv"</span>) <span class="co"># save it as csv</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>How would you add this code as an R Script to your repository?</p>
+</section>
+<section id="bonus" class="level3">
+<h3 class="anchored" data-anchor-id="bonus">Bonus</h3>
 <p>Person 2: Try to edit the csv file directly on GitHub!</p>
 <p>Person 1: Your turn!</p>
-<p><strong>No need to be a programmer to contribute to analytical workflows with GitHub!!</strong></p>
+<p><strong><em>No need to be a programmer to contribute to analytical workflows with GitHub!!</em></strong></p>
+<hr>
+</section>
+<section id="fork-workflow" class="level3">
+<h3 class="anchored" data-anchor-id="fork-workflow">Fork Workflow</h3>
+<section id="person-2-create-a-fork" class="level4">
+<h4 class="anchored" data-anchor-id="person-2-create-a-fork">Person 2: Create a Fork</h4>
+<ul>
+<li>Ask your teammate to Slack you the link to the repository</li>
+<li>Create a Fork by clicking on the Fork button on the top right view of your repository homepage</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="img/github-fork-button.png" class="img-fluid figure-img" style="width:60.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li><p>On your Fork, start editing the <code>README.md</code></p></li>
+<li><p>Add your name and your favorite dessert below your teammate entry: e.g.&nbsp;<code>- Sophia: chocolate</code></p></li>
+<li><p>Add a descriptive commit message</p></li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="img/github-commit.png" class="img-fluid figure-img" width="531"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li>Commit your changes</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="img/github-commit-button.png" class="img-fluid figure-img" style="width:20.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li>Create a pull request to merge those changes to the main repository using these <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork">instructions</a></li>
+</ul>
+</section>
+<section id="person-1" class="level4">
+<h4 class="anchored" data-anchor-id="person-1">Person 1:</h4>
+<ul>
+<li>Go to <em>your</em> repository and merge the PR</li>
+</ul>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
