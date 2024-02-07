@@ -2,7 +2,6 @@
 title: "Using the GitHub website"
 ---
 
-
 In this section, we will be using the GitHub.com website and demonstrate that you do not need to be a programmer to use version control and edit files on GitHub.
 
 ::: {.callout-note collapse=true}
@@ -14,6 +13,9 @@ If you have not already created a GitHub username, please do so now:
 - Follow optional [advice on choosing your username](https://happygitwithr.com/github-acct.html)
 :::
 
+
+## Collaborator Workflow
+
 ::: {.callout-tip}
 
 ### Our asks
@@ -24,9 +26,11 @@ If you have not already created a GitHub username, please do so now:
 - Listen to each other; avoid judgment and solutioneering.
 - Have fun!
 
+
 ### Prompt
 
 We want to log the information about people's favorite desserts using a repository.
+
 :::
 
 
@@ -73,23 +77,84 @@ knitr::include_graphics("img/github-commit-button.png")
 ```
 
 
-#### Person 1: add a file
+#### Person 1: add a csv file
 
-Download this [csv file](https://aurora.nceas.ucsb.edu/~brun/favorite_desserts.csv) about your favorite desserts to your computer
+Download this [csv file](https://raw.githubusercontent.com/brunj7/eds214-handson-ghcollab/main/data/iconic_desserts.csv) about your favorite desserts to your computer
 
-- Just drag and drop it on the Github web page of your repository to upload it
-- Add a short message about the file e.g. `Adding dessert csv` & hit `Commit changes`
+- Drag and drop it on the Github web page of your repository to upload it
+- Add a short message about the file e.g. `Add dessert csv` & hit `Commit changes`
 - Your have has been uploaded. Click on the filename to see it!
 
 You should have something similar to this repo: <https://github.com/brunj7/favorite-desserts>
 
 
-#### Bonus 
+#### Person 2: add an R script
+
+This is the script we used to scrape the iconic desserts listing: 
+
+```{r getting the data, eval=FALSE, message = FALSE, warning = FALSE}
+library(tidyverse)
+library(rvest)  # use to scrape website content
+
+# Check if that data folder exists and creates it if not
+dir.create("data", showWarnings = FALSE)
+
+# Read the webpage code
+webpage <- read_html("https://www.eatthis.com/iconic-desserts-united-states/")
+
+# Extract the desserts listing
+dessert_elements<- html_elements(webpage, "h2")
+dessert_listing <- dessert_elements %>% 
+  html_text2() %>%             # extracting the text associated with this type of elements of the webpage
+  as_tibble() %>%              # make it a data frame
+  rename(dessert = value) %>%  # better name for the column
+  head(.,-3) %>%               # 3 last ones were not desserts 
+  rowid_to_column("rank") %>%  # adding a column using the row number as proxy for the rank
+  write_csv("data/iconic_desserts.csv") # save it as csv
+```
+
+
+How would you add this code as an R Script to your repository?
+
+
+### Bonus 
 
 Person 2: Try to edit the csv file directly on GitHub! 
 
 Person 1: Your turn!
 
-**No need to be a programmer to contribute to analytical workflows with GitHub!!**
+***No need to be a programmer to contribute to analytical workflows with GitHub!!***
 
 
+<hr>
+
+
+### Fork Workflow
+
+#### Person 2: Create a Fork
+
+- Ask your teammate to Slack you the link to the repository
+- Create a Fork by clicking on the Fork button on the top right view of your repository homepage
+
+```{r fork-button, out.width="60%", echo=FALSE}
+knitr::include_graphics("img/github-fork-button.png")
+```
+- On your Fork, start editing the `README.md` 
+
+- Add your name and your favorite dessert below your teammate entry: e.g.  ` - Sophia: chocolate`
+- Add a descriptive commit message
+
+```{r echo=FALSE}
+knitr::include_graphics("img/github-commit.png")
+```
+
+- Commit your changes
+
+```{r commit-button2, out.width="20%", echo=FALSE}
+knitr::include_graphics("img/github-commit-button.png")
+```
+- Create a pull request to merge those changes to the main repository using these [instructions](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)
+
+#### Person 1:
+
+- Go to *your* repository and merge the PR
