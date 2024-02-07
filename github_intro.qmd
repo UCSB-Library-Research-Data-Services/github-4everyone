@@ -58,7 +58,15 @@ Although there are many ways to start a new repository, [GitHub](https://github.
 
 ## GitHub  
 	
-**GitHub is a company that hosts git repositories online** and provides several collaboration features (among which `forking`). GitHub fosters a great user community and has built a nice web interface to git, also adding great visualization/rendering capacities of your data.
+**GitHub is a company that hosts git repositories online** and provides several collaboration features (among which `forking`). GitHub fosters a great user community and has built a nice web interface to git, also adding great visualization/rendering capacities of your data. It is like a coding social platform for ~~nerds~~  ALL 
+
+A few highlights of what you can do with GitHub:
+
+- Publish and share your work (like the website we are using today!!)
+- Visualize your files and modifications  (highlight changes in your code; can render files such as csv, png, …)
+- Manage projects and tasks (GitHub issues)
+- Uses the markdown syntax everywhere (like Rmarkdown, quarto, and Jupyter notebooks!)
+
 
 
 ### GitHub Dashboard
