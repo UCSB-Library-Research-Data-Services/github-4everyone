@@ -76,14 +76,14 @@ This is the default landing page when you log into your account. It provides a m
 ![](img/github_overview-01_dashboard.png)
 
 
-### GtiHub User page
+### GitHub User page
 
-This page can be reached using with the following URL: https://github.com/`username`. For my user (`brunj7`) it would be: <https://github.com/brunj7>. It is a great space for you to provide some information about yourself and the main repositories you are working on. It also lists the GitHub Organizations you are part of. But more importantly, Users own repositories to host and share their code. You can list repositories from a User by clicking on the _repositories_ tab in the main GitHub menu bar at the top.
+This page can be reached using the following URL: https://github.com/`username`. For my user (`brunj7`) it would be: <https://github.com/brunj7>. It is a great space for you to provide some information about yourself and the main repositories you are working on. It also lists the GitHub Organizations you are part of. But more importantly, Users own repositories to host and share their code. You can list repositories from a User by clicking on the _repositories_ tab in the main GitHub menu bar at the top.
 
 ![](img/github_overview-02_user.png)
 
 
-### GtiHub Organization page
+### GitHub Organization page
 
 We will talk more about GitHub Organizations later. In a nutshell, organizations are like groups or teams that users can be members of. Like Users, Organizations can have a landing page and own repositories. However, they add several perks in terms of user management. Similarly to Users, you can access repositories from an Organization by clicking on the _repositories_ tab in the main GitHub menu bar at the top. You can access an organization's page similarly to a user: https://github.com/`organization-name`; e.g.  <https://github.com/UCSB-Library-Research-Data-Services>
 
@@ -132,4 +132,4 @@ Braga PHP, Hébert K, Hudgins EJ, Scott ER, Edwards BPM, Sánchez Reyes LL, et a
 
 ## Aknowledgements
 
-This materials was adapted from [NCEAS Reproducible Research Techniques for Synthesis](https://learning.nceas.ucsb.edu/2021-02-RRCourse/index.html) & [Collaborative Coding with GitHub. LNO Scientific Computing Team](https://github.com/NCEAS/scicomp-workshop-collaborative-coding).
+Some parts of this content was adapted from [NCEAS Reproducible Research Techniques for Synthesis](https://learning.nceas.ucsb.edu/2021-02-RRCourse/index.html) & [Collaborative Coding with GitHub. LNO Scientific Computing Team](https://github.com/NCEAS/scicomp-workshop-collaborative-coding).
