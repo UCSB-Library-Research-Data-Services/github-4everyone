@@ -55,7 +55,7 @@ knitr::include_graphics("img/github-readme_desserts.png")
 
 - Check your email to accept the invitation
 - Go to the repository website (link is provided in the invitation)
-- Start editing the README.md by clicking on pen at the top of the README.md file to edit it
+- Start editing the README.md by clicking on the pen at the top of the README.md file to edit it
 
 ```{r echo=FALSE}
 knitr::include_graphics("img/github-readme-edit.png")
@@ -79,7 +79,7 @@ knitr::include_graphics("img/github-commit-button.png")
 
 #### Person 1: add a csv file
 
-Download this [csv file](https://raw.githubusercontent.com/brunj7/eds214-handson-ghcollab/main/data/iconic_desserts.csv) about your favorite desserts to your computer. Note depedning of your web browser settings you might have to right-click on the page and select _Save As_.
+Download this [csv file](https://raw.githubusercontent.com/brunj7/eds214-handson-ghcollab/main/data/iconic_desserts.csv) about your favorite desserts to your computer. Note: depending on your web browser settings you might have to right-click on the page and select _Save As_.
 
 - Drag and drop it on the Github web page of your repository to upload it
 - Add a short message about the file e.g. `Add dessert csv` & hit `Commit changes`
