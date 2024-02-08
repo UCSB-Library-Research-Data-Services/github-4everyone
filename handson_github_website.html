@@ -251,7 +251,7 @@ Our asks
 <section id="person-1-owner" class="level4">
 <h4 class="anchored" data-anchor-id="person-1-owner">Person 1 (owner):</h4>
 <ul>
-<li>Create a repository using the following these <a href="https://docs.github.com/en/github/getting-started-with-github/create-a-repo">instructions</a> steps 1-6</li>
+<li>Create a repository using the following <a href="https://docs.github.com/en/github/getting-started-with-github/create-a-repo">instructions</a> steps 1-6</li>
 </ul>
 <p><img src="img/github-dessert-repo.png" class="img-fluid"></p>
 <ul>
@@ -265,7 +265,7 @@ Our asks
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="img/github-readme_desserts.png" class="img-fluid figure-img" width="1248"></p>
+<p><img src="img/github-readme_desserts.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
@@ -279,13 +279,13 @@ Our asks
 <ul>
 <li>Check your email to accept the invitation</li>
 <li>Go to the repository website (link is provided in the invitation)</li>
-<li>Start editing the README.md by clicking on pen at the top of the README.md file to edit it</li>
+<li>Start editing the README.md by clicking on the pen at the top of the README.md file to edit it</li>
 </ul>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="img/github-readme-edit.png" class="img-fluid figure-img" width="556"></p>
+<p><img src="img/github-readme-edit.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
@@ -299,7 +299,7 @@ Our asks
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="img/github-commit.png" class="img-fluid figure-img" width="531"></p>
+<p><img src="img/github-commit.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
@@ -319,7 +319,7 @@ Our asks
 </section>
 <section id="person-1-add-a-csv-file" class="level4">
 <h4 class="anchored" data-anchor-id="person-1-add-a-csv-file">Person 1: add a csv file</h4>
-<p>Download this <a href="https://raw.githubusercontent.com/brunj7/eds214-handson-ghcollab/main/data/iconic_desserts.csv">csv file</a> about your favorite desserts to your computer</p>
+<p>Download this <a href="https://raw.githubusercontent.com/brunj7/eds214-handson-ghcollab/main/data/iconic_desserts.csv">csv file</a> about your favorite desserts to your computer. Note: depending on your web browser settings you might have to right-click on the page and select <em>Save As</em>.</p>
 <ul>
 <li>Drag and drop it on the Github web page of your repository to upload it</li>
 <li>Add a short message about the file e.g.&nbsp;<code>Add dessert csv</code> &amp; hit <code>Commit changes</code></li>
@@ -334,7 +334,7 @@ Our asks
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rvest)  <span class="co"># use to scrape website content</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if that data folder exists and creates it if not</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if that data folder exists and create it if not</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="st">"data"</span>, <span class="at">showWarnings =</span> <span class="cn">FALSE</span>)</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the webpage code</span></span>
@@ -343,7 +343,7 @@ Our asks
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract the desserts listing</span></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>dessert_elements<span class="ot">&lt;-</span> <span class="fu">html_elements</span>(webpage, <span class="st">"h2"</span>)</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>dessert_listing <span class="ot">&lt;-</span> dessert_elements <span class="sc">%&gt;%</span> </span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_text2</span>() <span class="sc">%&gt;%</span>             <span class="co"># extracting the text associated with this type of elements of the webpage</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_text2</span>() <span class="sc">%&gt;%</span>             <span class="co"># extracting the text associated with this type of element of the webpage</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>() <span class="sc">%&gt;%</span>              <span class="co"># make it a data frame</span></span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">dessert =</span> value) <span class="sc">%&gt;%</span>  <span class="co"># better name for the column</span></span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(.,<span class="sc">-</span><span class="dv">3</span>) <span class="sc">%&gt;%</span>               <span class="co"># 3 last ones were not desserts </span></span>
@@ -361,7 +361,7 @@ Our asks
 </section>
 <section id="fork-workflow" class="level3">
 <h3 class="anchored" data-anchor-id="fork-workflow">Fork Workflow</h3>
-<p>If you want to contribute to a repository that you have not be added as a collaborator, you need to first fork the repository. This creates a linked copy under your username that you can edit. Once you are done with your contribution, you can send a request to incorporate your changes to the original repository using what is call a Pull Request, in other words you ask the repository owner to pull your changes into their repository.</p>
+<p>If you want to contribute to a repository that you have not been added to as a collaborator, you need to first fork the repository. This creates a linked copy under your username that you can edit. Once you are done with your contribution, you can send a request to incorporate your changes to the original repository using what is called a Pull Request, in other words, you ask the repository owner to pull your changes into their repository.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -379,7 +379,7 @@ Our ask
 <section id="person-2-create-a-fork-of-the-person-1-repository" class="level4">
 <h4 class="anchored" data-anchor-id="person-2-create-a-fork-of-the-person-1-repository">Person 2: Create a Fork of the person 1 repository</h4>
 <ul>
-<li>Get the link the the repo from Person 1 via the Zoom chat</li>
+<li>Get the link the repository from Person 1 via the Zoom chat</li>
 <li>Go to their repository webpage</li>
 <li>Create a Fork by clicking on the Fork button on the top right view of your repository homepage</li>
 </ul>
@@ -401,7 +401,7 @@ Our ask
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="img/github-commit.png" class="img-fluid figure-img" width="531"></p>
+<p><img src="img/github-commit.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
