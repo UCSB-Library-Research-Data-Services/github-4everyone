@@ -36,7 +36,7 @@ We want to log the information about people's favorite desserts using a reposito
 
 #### Person 1 (owner):
 
-- Create a repository using the  following these [instructions](https://docs.github.com/en/github/getting-started-with-github/create-a-repo) steps 1-6
+- Create a repository using the following  [instructions](https://docs.github.com/en/github/getting-started-with-github/create-a-repo) steps 1-6
 
 ![](img/github-dessert-repo.png)
 
@@ -79,7 +79,7 @@ knitr::include_graphics("img/github-commit-button.png")
 
 #### Person 1: add a csv file
 
-Download this [csv file](https://raw.githubusercontent.com/brunj7/eds214-handson-ghcollab/main/data/iconic_desserts.csv) about your favorite desserts to your computer
+Download this [csv file](https://raw.githubusercontent.com/brunj7/eds214-handson-ghcollab/main/data/iconic_desserts.csv) about your favorite desserts to your computer. Note depedning of your web browser settings you might have to right-click on the page and select _Save As_.
 
 - Drag and drop it on the Github web page of your repository to upload it
 - Add a short message about the file e.g. `Add dessert csv` & hit `Commit changes`
