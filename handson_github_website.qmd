@@ -96,7 +96,7 @@ This is the script we used to scrape the iconic desserts listing:
 library(tidyverse)
 library(rvest)  # use to scrape website content
 
-# Check if that data folder exists and creates it if not
+# Check if that data folder exists and create it if not
 dir.create("data", showWarnings = FALSE)
 
 # Read the webpage code
@@ -105,7 +105,7 @@ webpage <- read_html("https://www.eatthis.com/iconic-desserts-united-states/")
 # Extract the desserts listing
 dessert_elements<- html_elements(webpage, "h2")
 dessert_listing <- dessert_elements %>% 
-  html_text2() %>%             # extracting the text associated with this type of elements of the webpage
+  html_text2() %>%             # extracting the text associated with this type of element of the webpage
   as_tibble() %>%              # make it a data frame
   rename(dessert = value) %>%  # better name for the column
   head(.,-3) %>%               # 3 last ones were not desserts 
@@ -131,7 +131,7 @@ Person 1: Your turn!
 
 ### Fork Workflow
 
-If you want to contribute to a repository that you have not be added as a collaborator, you need to first fork the repository. This creates a linked copy under your username that you can edit. Once you are done with your contribution, you can send a request to incorporate your changes to the original repository using what is call a Pull Request, in other words you ask the repository owner to pull your changes into their repository.
+If you want to contribute to a repository that you have not been added to as a collaborator, you need to first fork the repository. This creates a linked copy under your username that you can edit. Once you are done with your contribution, you can send a request to incorporate your changes to the original repository using what is called a Pull Request, in other words, you ask the repository owner to pull your changes into their repository.
 
 
 ::: {.callout-tip}
@@ -149,7 +149,7 @@ With **another** collaborator keep logging information about people's favorite d
 
 #### Person 2: Create a Fork of the person 1 repository
 
-- Get the link the the repo from Person 1 via the Zoom chat
+- Get the link the repository from Person 1 via the Zoom chat
 - Go to their repository webpage
 - Create a Fork by clicking on the Fork button on the top right view of your repository homepage
 
