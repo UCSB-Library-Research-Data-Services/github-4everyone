@@ -132,4 +132,4 @@ Braga PHP, Hébert K, Hudgins EJ, Scott ER, Edwards BPM, Sánchez Reyes LL, et a
 
 ## Aknowledgements
 
-Some parts of this content was adapted from [NCEAS Reproducible Research Techniques for Synthesis](https://learning.nceas.ucsb.edu/2021-02-RRCourse/index.html) & [Collaborative Coding with GitHub. LNO Scientific Computing Team](https://github.com/NCEAS/scicomp-workshop-collaborative-coding).
+Some parts of this content were adapted from [NCEAS Reproducible Research Techniques for Synthesis](https://learning.nceas.ucsb.edu/2021-02-RRCourse/index.html) & [Collaborative Coding with GitHub. LNO Scientific Computing Team](https://github.com/NCEAS/scicomp-workshop-collaborative-coding).
