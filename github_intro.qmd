@@ -23,10 +23,9 @@ Version control systems help you track all of the changes to your files, without
     - git creates a timeline or history of your files
 - __GitHub__: is a code repository in the cloud that enables users to store their git repositories and share them with others. Github also adds many features to manage projects and document your work.
 
+<img style="float: right;width: 90px;" src="img/git_icon.png">
 
-## git
-
- <img style="float: right;width: 100px;" src="img/git_icon.png">
+## git 
 
 This section focuses on the code versioning system called `Git`. Note that there are others, such as `Mercurial` or `svn` for example.
 
