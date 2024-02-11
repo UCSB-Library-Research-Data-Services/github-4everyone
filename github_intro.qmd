@@ -121,6 +121,8 @@ to accomplish a reproducible workflow.
 - **GitHub.com / your dashboard (if logged in)**: <https://github.com>
 - **A user account**: <https://github.com/brunj7>
 - **An organization account**: <https://github.com/UCSB-Library-Research-Data-Services>
+- **A repository under an user**: <https://github.com/brunj7/favorite-desserts>
+- **A repository under an organization**: <https://github.com/UCSB-Library-Research-Data-Services/github-4everyone>
 
 
 ## Recommended reading
