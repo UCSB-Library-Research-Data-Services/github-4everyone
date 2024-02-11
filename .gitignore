@@ -48,9 +48,10 @@ po/*~
 # RStudio Connect folder
 rsconnect/
 
+# quarto
 /.quarto/
- # gh action set up to render website
-/_site/  
+/_site/
+/_freeze/
 
 # Mac Stuff
 .DS_Store
