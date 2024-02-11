@@ -79,7 +79,7 @@ knitr::include_graphics("img/github-commit-button.png")
 
 #### Person 1: add a csv file
 
-Download this [csv file](https://raw.githubusercontent.com/brunj7/eds214-handson-ghcollab/main/data/iconic_desserts.csv) about your favorite desserts to your computer. Note: depending on your web browser settings you might have to right-click on the page and select _Save As_.
+Download this [csv file](https://raw.githubusercontent.com/brunj7/eds214-handson-ghcollab/main/data/iconic_desserts.csv) about the most iconic desserts in America (according to this website <https://www.eatthis.com/iconic-desserts-united-states/>) to your computer. Note: depending on your web browser settings you might have to right-click on the page and select _Save As_.
 
 - Drag and drop it on the Github web page of your repository to upload it
 - Add a short message about the file e.g. `Add iconic_desserts.csv` & hit `Commit changes`
