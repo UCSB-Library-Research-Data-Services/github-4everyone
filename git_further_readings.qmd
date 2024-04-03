@@ -2,6 +2,9 @@
 title: "Further readings"
 ---
 
+## GitHub website
+
+- Downloading only one folder from a repo: <https://download-directory.github.io/>
 
 ## Git general introduction
 
